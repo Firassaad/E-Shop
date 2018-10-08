@@ -1,0 +1,29 @@
+test_homepage:
+    path:     /indexx.html
+    defaults: { _controller: TestBundle:Default:test }
+shop_homepage1:
+    path:     /
+    defaults: { _controller: TestBundle:Default:indexx }
+shop_homepage2:
+    path:     /products.html
+    defaults: { _controller: TestBundle:Default:products }
+
+shop_homepage3:
+    path:     /products1.html
+    defaults: { _controller: TestBundle:Default:products1 }
+shop_homepage4:
+    path:     /registered.html
+    defaults: { _controller: TestBundle:Default:registered }
+
+shop_homepage5:
+    path:     /single.html
+    defaults: { _controller: TestBundle:Default:single }
+
+shop_homepage6:
+    path:     /codes.html
+    defaults: { _controller: TestBundle:Default:codes }
+
+shop_homepage7:
+    path:     /checkout.html
+    defaults: { _controller: TestBundle:Default:checkout }
+
