@@ -1,3 +1,15 @@
 crud_homepage:
-    path:     /
+    path:     /xx
     defaults: { _controller: CrudBundle:Default:index }
+add:
+    path:     /add
+    defaults: { _controller: CrudBundle:Default:add }
+update:
+    path:     /update/{id}
+    defaults: { _controller: CrudBundle:Default:update }
+list:
+    path:     /list
+    defaults: { _controller: CrudBundle:Default:list }
+supprimer:
+    path:     /delete/{id}
+    defaults: { _controller: CrudBundle:Default:delete }

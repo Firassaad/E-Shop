@@ -1,0 +1,16 @@
+<h1>liste des articles</h1>
+<table border="1">
+    <tr>
+        <td>Name</td>
+        <td>Price</td>
+        <td>Quantity</td>
+    </tr>
+    {% for article in articles %}
+    <tr>
+        <td>{{ article.name }}</td>
+        <td>{{ article.price }}</td>
+        <td>{{ article.quantity }}</td>
+
+    </tr>
+    {% endfor %}
+</table>
