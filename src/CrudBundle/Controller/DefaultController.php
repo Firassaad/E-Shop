@@ -33,7 +33,7 @@ class DefaultController extends Controller
         $article = $em->getRepository('CrudBundle:Article')->find($id);
         $em->remove($article);
         $em->flush();
-        return $this->redirect('CrudBundle:Default:affichage.html.twig');
+        return $this->redirectToRoute('list');
 
     }
     public function addAction(Request $request){

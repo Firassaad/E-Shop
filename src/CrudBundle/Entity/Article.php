@@ -36,11 +36,34 @@ class Article
     private $quantity;
 
     /**
+     * @return string
+     */
+    public function getImage ()
+    {
+        return $this->image;
+    }
+
+    /**
+     * @param string $image
+     */
+    public function setImage ($image)
+    {
+        $this->image=$image;
+    }
+
+    /**
      * @var float
      *
      * @ORM\Column(name="price", type="float")
      */
     private $price;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="image", type="string", length=1000)
+     */
+    private $image;
 
 
     /**
