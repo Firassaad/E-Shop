@@ -1,0 +1,23 @@
+CrudBundle\Entity\Article:
+    type: entity
+    table: null
+    repositoryClass: CrudBundle\Repository\ArticleRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        name:
+            type: string
+            length: 255
+        quantity:
+            type: integer
+            column: Quantity
+        price:
+            type: float
+        image:
+            type: string
+            length: '1000'
+    lifecycleCallbacks: {  }

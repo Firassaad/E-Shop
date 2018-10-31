@@ -13,3 +13,9 @@ list:
 supprimer:
     path:     /delete/{id}
     defaults: { _controller: CrudBundle:Default:delete }
+addfemme:
+    path:     /addfemme/{id}
+    defaults: { _controller: CrudBundle:Default:addfemme }
+listfemme:
+    path:     /listFemme
+    defaults: { _controller: CrudBundle:Femme:list }

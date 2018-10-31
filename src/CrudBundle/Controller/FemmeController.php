@@ -8,7 +8,7 @@ use CrudBundle\Form\ArticleType;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 
-class DefaultController extends Controller
+class FemmeController extends Controller
 {
     public function indexAction()
     {
@@ -24,9 +24,9 @@ class DefaultController extends Controller
     }
     public function listAction(){
         $em = $this->getDoctrine()->getManager();
-        $article = $em->getRepository('CrudBundle:Article')->findAll();
-        return  $this->render('CrudBundle:Default:affichage.html.twig', array(
-            'articles'=>$article));
+        $femme = $em->getRepository('CrudBundle:femme')->findAll();
+        return  $this->render('CrudBundle:Femme:affichage.html.twig', array(
+            'femmes'=>$femme));
 
     }
     public function deleteAction( $id){

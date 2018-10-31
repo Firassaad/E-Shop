@@ -5,12 +5,12 @@ namespace CrudBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * Article
+ * femme
  *
- * @ORM\Table(name="article")
- * @ORM\Entity(repositoryClass="CrudBundle\Repository\ArticleRepository")
+ * @ORM\Table(name="femme")
+ * @ORM\Entity(repositoryClass="CrudBundle\Repository\femmeRepository")
  */
-class Article
+class femme
 {
     /**
      * @var int
@@ -65,7 +65,7 @@ class Article
      *
      * @param string $name
      *
-     * @return Article
+     * @return femme
      */
     public function setName($name)
     {
@@ -89,7 +89,7 @@ class Article
      *
      * @param integer $quantity
      *
-     * @return Article
+     * @return femme
      */
     public function setQuantity($quantity)
     {
@@ -113,7 +113,7 @@ class Article
      *
      * @param float $price
      *
-     * @return Article
+     * @return femme
      */
     public function setPrice($price)
     {
@@ -137,7 +137,7 @@ class Article
      *
      * @param string $image
      *
-     * @return Article
+     * @return femme
      */
     public function setImage($image)
     {

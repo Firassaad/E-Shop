@@ -7,16 +7,16 @@
         <td>Image</td>
 
     </tr>
-    {% for article in articles %}
+    {% for femme in femmes %}
     <tr>
-        <td>{{ article.name }}</td>
-        <td>{{ article.price }}</td>
-        <td>{{ article.quantity }}</td>
-        <td><img src="{{ article.image }}" height="150px" width="150px"></td>
+        <td>{{ femme.name }}</td>
+        <td>{{ femme.price }}</td>
+        <td>{{ femme.quantity }}</td>
+        <td><img src="{{ femme.image }}" height="150px" width="150px"></td>
         <td>
             <ul>
                 <li>
-                    <a href="{{ path('addfemme', {'id':article.id})}}">femme</a>
+                    {#<a href="{{ path('addfemme', {'id':article.id})}}">femme</a>#}
                 </li>
                 <li>
                     <a href="#">modifier</a>
