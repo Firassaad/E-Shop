@@ -17,7 +17,12 @@ CrudBundle\Entity\Article:
             column: Quantity
         price:
             type: float
+        date:
+            type: datetime
         image:
             type: string
             length: '1000'
+        type:
+            type: string
+            length: 255
     lifecycleCallbacks: {  }

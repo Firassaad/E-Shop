@@ -23,6 +23,7 @@ class DefaultController extends Controller
 
     }
     public function listAction(){
+
         $em = $this->getDoctrine()->getManager();
         $article = $em->getRepository('CrudBundle:Article')->findAll();
         return  $this->render('CrudBundle:Default:affichage.html.twig', array(
@@ -63,14 +64,5 @@ class DefaultController extends Controller
         return  $this->render('CrudBundle:Default:update.html.twig', array(
             'form' => $form->createView(),));
     }
-    public function addfemmeAction(Request $request , $id){
-        $em = $this->getDoctrine()->getManager();
-        $femme = new femme();
-        $femme = $em->getRepository('CrudBundle:Article')->find($id);
-        printf('Received data:', $femme);
-            $em = $this->getDoctrine()->getManager();
-            $em->persist($femme);//persist the contact object
-            $em->flush();//save it to the db
-        return  $this->render('CrudBundle:Default:affichage.html.twig');
-    }
+
 }

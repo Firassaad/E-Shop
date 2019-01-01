@@ -2,7 +2,9 @@
 
 namespace CrudBundle\Form;
 
+use CrudBundle\Entity\Article;
 use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\Extension\Core\Type\IntegerType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
@@ -14,28 +16,37 @@ class ArticleType extends AbstractType
     /**
      * {@inheritdoc}
      */
-    public function buildForm(FormBuilderInterface $builder, array $options)
+    public function buildForm (FormBuilderInterface $builder, array $options)
     {
         $builder
             ->add('name', TextType::class)
             ->add('quantity', IntegerType::class)
             ->add('price')
+            ->add('image')
+            ->add('type' ,ChoiceType::class, array(
+                'choices'  => array(
+                    'femme' => 'femme',
+                    'homme' => 'homme',
+                    'enfant' => 'enfant',
+                )))
             ->setMethod('GET')
-            ->add('ajouter',SubmitType::class);
-    }/**
+            ->add('ajouter', SubmitType::class);
+    }
+
+    /**
      * {@inheritdoc}
      */
-    public function configureOptions(OptionsResolver $resolver)
+    public function configureOptions (OptionsResolver $resolver)
     {
         $resolver->setDefaults(array(
-            'data_class' => 'CrudBundle\Entity\Article'
+            'data_class'=>'CrudBundle\Entity\Article'
         ));
     }
 
     /**
      * {@inheritdoc}
      */
-    public function getBlockPrefix()
+    public function getBlockPrefix ()
     {
         return 'crudbundle_article';
     }

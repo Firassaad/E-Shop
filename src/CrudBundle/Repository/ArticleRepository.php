@@ -1,7 +1,5 @@
 <?php
-
 namespace CrudBundle\Repository;
-
 /**
  * ArticleRepository
  *

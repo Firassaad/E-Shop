@@ -27,3 +27,6 @@ shop_homepage7:
     path:     /checkout.html
     defaults: { _controller: TestBundle:Default:checkout }
 
+femmePage:
+    path:     /femme.html
+    defaults: { _controller: TestBundle:Default:femme }

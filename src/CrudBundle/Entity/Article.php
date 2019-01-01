@@ -49,6 +49,51 @@ class Article
      */
     private $image;
 
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="date", type="datetime")
+     */
+    private $date;
+
+    /**
+     * @return \DateTime
+     */
+    public function getDate ()
+    {
+        return $this->date;
+    }
+
+    /**
+     * @param \DateTime $date
+     */
+    public function setDate ($date)
+    {
+        $this->date=$date;
+    }
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="type", type="string", length=255)
+     */
+    private $type;
+
+    /**
+     * @return string
+     */
+    public function getType ()
+    {
+        return $this->type;
+    }
+
+    /**
+     * @param string $type
+     */
+    public function setType ($type)
+    {
+        $this->type=$type;
+    }
 
     /**
      * Get id

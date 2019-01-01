@@ -5,6 +5,9 @@
         <td>Price</td>
         <td>Quantity</td>
         <td>Image</td>
+        <td>Type</td>
+        <td>Date</td>
+
 
     </tr>
     {% for article in articles %}
@@ -13,6 +16,9 @@
         <td>{{ article.price }}</td>
         <td>{{ article.quantity }}</td>
         <td><img src="{{ article.image }}" height="150px" width="150px"></td>
+        <td>{{ article.type }}</td>
+        <td>{{ "now"|date("m/d/Y") }}</td>
+
         <td>
             <ul>
                 <li>

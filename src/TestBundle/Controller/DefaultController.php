@@ -13,7 +13,10 @@ class DefaultController extends Controller
     }
     public function productsAction()
     {
-        return $this->render('TestBundle:Default:products.html.twig');
+        $em = $this->getDoctrine()->getManager();
+        $article = $em->getRepository('CrudBundle:Article')->findAll();
+        return  $this->render('TestBundle:Default:products.html.twig', array(
+            'articles'=>$article));
     }
     public function products1Action()
     {
@@ -34,5 +37,9 @@ class DefaultController extends Controller
     public function checkoutAction()
     {
         return $this->render('TestBundle:Default:checkout.html.twig');
+    }
+    public function femmeAction()
+    {
+        return $this->render('TestBundle:Default:femme.html.twig');
     }
 }
